@@ -50,12 +50,12 @@ with st.sidebar:
     st.divider()
     
     # Model selection
-    model_choice = st.selectbox(
+    model_choice = st.text_input(
         "Model",
-        ["gemini-1.5-pro", "gemini-1.5-flash", "gemini-1.0-pro"],
-        index=1,
-        help="Choose the Gemini model. Flash is faster, Pro is more capable."
+        value="gemini-1.5-flash",
+        help="Enter any valid Gemini model ID (e.g., gemini-1.5-flash, gemini-1.5-pro, gemini-exp-1206)."
     )
+
     
     # Temperature slider
     temperature = st.slider(
